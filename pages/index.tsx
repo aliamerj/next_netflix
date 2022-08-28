@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/banner/Banner.component";
+import Card from "../components/card/Card.component";
 import Navbar from "../components/navbar/Navbar.component";
 import styles from "../styles/Home.module.css";
 
@@ -18,6 +19,19 @@ const Home: NextPage = () => {
         <Banner
           title="House of Dragons"
           subtitle="new awesome movie"
+          imageUrl="https://www.hollywoodreporter.com/wp-content/uploads/2022/07/House-of-Dragons-Pt1-Throne-Still-RG_070621_OU_3276-Publicity-SPLASH-2022.jpg?w=1440&h=810&crop=1&resize=1500%2C845"
+        />
+
+        <Card
+          size="small"
+          imageUrl="https://www.hollywoodreporter.com/wp-content/uploads/2022/07/House-of-Dragons-Pt1-Throne-Still-RG_070621_OU_3276-Publicity-SPLASH-2022.jpg?w=1440&h=810&crop=1&resize=1500%2C845"
+        />
+        <Card
+          size="medium"
+          imageUrl="https://www.hollywoodreporter.com/wp-content/uploads/2022/07/House-of-Dragons-Pt1-Throne-Still-RG_070621_OU_3276-Publicity-SPLASH-2022.jpg?w=1440&h=810&crop=1&resize=1500%2C845"
+        />
+        <Card
+          size="large"
           imageUrl="https://www.hollywoodreporter.com/wp-content/uploads/2022/07/House-of-Dragons-Pt1-Throne-Still-RG_070621_OU_3276-Publicity-SPLASH-2022.jpg?w=1440&h=810&crop=1&resize=1500%2C845"
         />
       </main>

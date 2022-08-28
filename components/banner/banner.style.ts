@@ -5,10 +5,10 @@ export const BannerContainer = styled("div")(
   ({ imageUrl }: { imageUrl: string }) => ({
     backgroundImage: `url(${imageUrl})`,
     width: "100%",
-    height: "70%",
-    position: "absolute",
+    height: "65vh",
     backgroundSize: "cover",
     backgroundPosition: "25% 25%",
+    display: "block",
   })
 );
 export const BannerLeftContainer = styled("div")(() => ({

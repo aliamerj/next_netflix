@@ -1,7 +1,13 @@
-import Image from "next/image";
-import { LgItem, MdItem, SmItem } from "./card.style";
+import {
+  CardImageStyle,
+  ContainerStyle,
+  LgItem,
+  MdItem,
+  SmItem,
+} from "./card.style";
+type ImageSizes = "small" | "medium" | "large";
 
-const Card = ({ imageUrl, size }: { imageUrl: string; size: string }) => {
+const Card = ({ imageUrl, size }: { imageUrl: string; size: ImageSizes }) => {
   const ClassMap = {
     large: LgItem,
     medium: MdItem,
@@ -9,21 +15,27 @@ const Card = ({ imageUrl, size }: { imageUrl: string; size: string }) => {
   };
   if (size === "large") {
     return (
-      <ClassMap.large>
-        <Image src={imageUrl} alt="image" />
-      </ClassMap.large>
+      <ContainerStyle>
+        <ClassMap.large>
+          <CardImageStyle src={imageUrl} alt="image" layout="fill" />
+        </ClassMap.large>
+      </ContainerStyle>
     );
   } else if (size === "medium") {
     return (
-      <ClassMap.medium>
-        <Image src={imageUrl} alt="image" />
-      </ClassMap.medium>
+      <ContainerStyle>
+        <ClassMap.medium>
+          <CardImageStyle src={imageUrl} alt="image" layout="fill" />
+        </ClassMap.medium>
+      </ContainerStyle>
     );
-  } else if (size === "small") {
+  } else {
     return (
-      <ClassMap.small>
-        <Image src={imageUrl} alt="image" />
-      </ClassMap.small>
+      <ContainerStyle>
+        <ClassMap.small>
+          <CardImageStyle src={imageUrl} alt="image" layout="fill" />
+        </ClassMap.small>
+      </ContainerStyle>
     );
   }
 };
